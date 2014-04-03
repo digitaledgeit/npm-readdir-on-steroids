@@ -2,8 +2,14 @@ var readdir = require('../index.js');
 
 var options = {
 
-	//only read two directories down
+	//how deep should we go?
 	depth: 2,
+
+	//should we list the directory paths too?
+	listDirectories: true,
+
+	//should we filter the directories too?
+	filterDirectories: false,
 
 	//filter files ending in '.js'
 	filter: function(file, stats) {
@@ -16,6 +22,7 @@ var options = {
 function log(err, files) {
 	if (err) throw err;
 	console.log(files);
+	console.log('done!');
 }
 
 readdir(process.argv[2], options, log);

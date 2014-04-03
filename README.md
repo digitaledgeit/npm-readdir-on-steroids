@@ -11,9 +11,10 @@ Reads the contents of a directory.
 
 ## Options
 
- - `{integer} depth` - How many levels of directories to read.
- - `{function(file, stats)} filter` - A function to filter the directory contents.
-
+ * `{integer}   [options.depth]                 How deep to read directory contents`
+ * `{boolean}   [options.listDirectories]       Whether the directory paths should be listed too`
+ * `{function}  [options.filter]                Filters which files should be listed`
+ * `{boolean}   [options.filterDirectories]     Whether the filter should be applied to the directories too`
 
 ## Usage
 
@@ -21,8 +22,14 @@ Reads the contents of a directory.
 
 	var options = {
 
-		//only read two directories down
+		//how deep should we go?
 		depth: 2,
+
+		//should we list the directory paths too?
+		listDirectories: false,
+
+		//should we filter the directories too?
+		filterDirectories: false,
 
 		//filter files ending in '.js'
 		filter: function(file, stats) {
