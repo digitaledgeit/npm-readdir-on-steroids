@@ -1,0 +1,16 @@
+{
+  "name": "readdir-on-steroids",
+  "version": "0.1.0",
+  "description": "Reads the contents of a directory.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "promise": "~4.0.0",
+    "flatten": "0.0.1",
+    "extend": "~1.2.1"
+  },
+  "devDependencies": {},
+  "author": "James Newell <james@digitaledgeit.com.au>"
+}
