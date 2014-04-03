@@ -1,16 +1,19 @@
 {
-  "name": "readdir-on-steroids",
-  "version": "0.1.0",
-  "description": "Reads the contents of a directory.",
-  "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
-  "dependencies": {
-    "promise": "~4.0.0",
-    "flatten": "0.0.1",
-    "extend": "~1.2.1"
-  },
-  "devDependencies": {},
-  "author": "James Newell <james@digitaledgeit.com.au>"
+	"name": "readdir-on-steroids",
+	"version": "0.1.0",
+	"keywords": ["fs", "readdir", "recursive"],
+	"description": "Reads the contents of a directory.",
+	"author": "James Newell <james@digitaledgeit.com.au>",
+	"bugs": {
+		"url": "https://github.com/digitaledgeit/readdir-on-steroids/issues"
+	},
+	"repository": {
+		"type" : "git",
+		"url" : "https://github.com/digitaledgeit/readdir-on-steroids.git"
+	},
+	"dependencies": {
+		"promise": "~4.0.0",
+		"flatten": "0.0.1",
+		"extend": "~1.2.1"
+	}
 }

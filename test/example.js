@@ -1,10 +1,11 @@
-var readdir = require('../index.js')
+var readdir = require('../index.js');
 
-//filter files ending in '.js'
 var options = {
 
+	//only read two directories down
 	depth: 2,
 
+	//filter files ending in '.js'
 	filter: function(file, stats) {
 		return file.substr(-3, 3) === '.js';
 	}
