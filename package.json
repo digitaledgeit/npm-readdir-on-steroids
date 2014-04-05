@@ -1,6 +1,6 @@
 {
 	"name": "readdir-on-steroids",
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"keywords": ["fs", "readdir", "recursive", "directory", "filter"],
 	"description": "Recursively reads the contents of a directory.",
 	"author": "James Newell <james@digitaledgeit.com.au>",
