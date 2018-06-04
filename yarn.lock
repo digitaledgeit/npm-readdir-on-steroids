@@ -16,7 +16,7 @@
     esutils "^2.0.2"
     js-tokens "^3.0.0"
 
-"@jameslnewell/cancelable-promise@1.1.0-alpha.f106bb76":
+"@jameslnewell/cancelable-promise@^1.0.2":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@jameslnewell/cancelable-promise/-/cancelable-promise-1.0.2.tgz#fbf0b4505900364b25ddd1c59f75782cf27084f1"
 
@@ -26,25 +26,25 @@
   dependencies:
     any-observable "^0.3.0"
 
-"@tradie/cli-utils@1.2.0-alpha.27c7c657":
-  version "1.2.0-alpha.27c7c657"
-  resolved "https://registry.yarnpkg.com/@tradie/cli-utils/-/cli-utils-1.2.0-alpha.27c7c657.tgz#f45a093d43ae6bee9d8f84476aff79a064ee9b4c"
+"@tradie/cli-utils@1.2.0-alpha.1a7ea183":
+  version "1.2.0-alpha.1a7ea183"
+  resolved "https://registry.yarnpkg.com/@tradie/cli-utils/-/cli-utils-1.2.0-alpha.1a7ea183.tgz#94ec7634e73c1b1baa8d0f73d43a0c0cebc34258"
   dependencies:
     "@types/node" "^9.4.6"
 
-"@tradie/cli@2.0.0-alpha.27c7c657":
-  version "2.0.0-alpha.27c7c657"
-  resolved "https://registry.yarnpkg.com/@tradie/cli/-/cli-2.0.0-alpha.27c7c657.tgz#41aa3881acb4cd6d826fb9fa223c9feeea745491"
+"@tradie/cli@2.0.0-alpha.1a7ea183":
+  version "2.0.0-alpha.1a7ea183"
+  resolved "https://registry.yarnpkg.com/@tradie/cli/-/cli-2.0.0-alpha.1a7ea183.tgz#96b255f43aa7741761dd9ac48e167e45d792fc58"
   dependencies:
     "@types/yargs" "^11.0.0"
     chalk "^2.4.1"
     yargs "^8.0.1"
 
-"@tradie/file-utils@2.0.0-alpha.27c7c657":
-  version "2.0.0-alpha.27c7c657"
-  resolved "https://registry.yarnpkg.com/@tradie/file-utils/-/file-utils-2.0.0-alpha.27c7c657.tgz#0124b6c986d3eac2c54f45952a36be47193dbc9a"
+"@tradie/file-utils@2.0.0-alpha.1a7ea183":
+  version "2.0.0-alpha.1a7ea183"
+  resolved "https://registry.yarnpkg.com/@tradie/file-utils/-/file-utils-2.0.0-alpha.1a7ea183.tgz#db83c698c91fa251b7da753632b2392e286311f4"
   dependencies:
-    "@jameslnewell/cancelable-promise" "1.1.0-alpha.f106bb76"
+    "@jameslnewell/cancelable-promise" "^1.0.2"
     "@types/anymatch" "^1.3.0"
     "@types/chokidar" "^1.7.5"
     "@types/del" "^3.0.0"
@@ -56,11 +56,11 @@
     finder-on-steroids "^0.4.0"
     fs-extra "^4.0.2"
 
-"@tradie/generator-utils@1.2.0-alpha.27c7c657":
-  version "1.2.0-alpha.27c7c657"
-  resolved "https://registry.yarnpkg.com/@tradie/generator-utils/-/generator-utils-1.2.0-alpha.27c7c657.tgz#6aa6dfca45071fea68210cd22be71245cd6d8450"
+"@tradie/generator-utils@1.2.0-alpha.1a7ea183":
+  version "1.2.0-alpha.1a7ea183"
+  resolved "https://registry.yarnpkg.com/@tradie/generator-utils/-/generator-utils-1.2.0-alpha.1a7ea183.tgz#303310824ead11817145470b8439f333c8efc1d8"
   dependencies:
-    "@tradie/file-utils" "2.0.0-alpha.27c7c657"
+    "@tradie/file-utils" "2.0.0-alpha.1a7ea183"
     "@types/diff" "^3.5.1"
     "@types/extend" "^3.0.0"
     "@types/inquirer" "^0.0.41"
@@ -71,62 +71,62 @@
     fs-extra "^3.0.1"
     inquirer "^3.2.0"
 
-"@tradie/jest-utils@2.0.0-alpha.27c7c657":
-  version "2.0.0-alpha.27c7c657"
-  resolved "https://registry.yarnpkg.com/@tradie/jest-utils/-/jest-utils-2.0.0-alpha.27c7c657.tgz#158569b5d523dbadab8dce9da79dbac0f4af21d8"
+"@tradie/jest-utils@2.0.0-alpha.1a7ea183":
+  version "2.0.0-alpha.1a7ea183"
+  resolved "https://registry.yarnpkg.com/@tradie/jest-utils/-/jest-utils-2.0.0-alpha.1a7ea183.tgz#f64142b31eee8a1598adf15a048b7600ebd4c806"
   dependencies:
     "@types/babel-core" "^6.25.3"
     babel-core "^6.26.0"
     jest-cli "^22.4.2"
     typescript "^2.7.2"
 
-"@tradie/node-scripts@1.0.0-alpha.27c7c657":
-  version "1.0.0-alpha.27c7c657"
-  resolved "https://registry.yarnpkg.com/@tradie/node-scripts/-/node-scripts-1.0.0-alpha.27c7c657.tgz#c7a3f45499e6c64d59062825ad7d923f6844462a"
+"@tradie/node-scripts@1.0.0-alpha.1a7ea183":
+  version "1.0.0-alpha.1a7ea183"
+  resolved "https://registry.yarnpkg.com/@tradie/node-scripts/-/node-scripts-1.0.0-alpha.1a7ea183.tgz#53593dc5cd346a688ac6709f2f19b57778b3daec"
   dependencies:
-    "@tradie/cli" "2.0.0-alpha.27c7c657"
-    "@tradie/file-utils" "2.0.0-alpha.27c7c657"
-    "@tradie/generator-utils" "1.2.0-alpha.27c7c657"
-    "@tradie/jest-utils" "2.0.0-alpha.27c7c657"
-    "@tradie/processor-utils" "2.0.0-alpha.27c7c657"
-    "@tradie/reporter-utils" "2.1.0-alpha.27c7c657"
-    "@tradie/tslint-utils" "1.0.0-alpha.27c7c657"
-    "@tradie/typescript-utils" "1.0.0-alpha.27c7c657"
+    "@tradie/cli" "2.0.0-alpha.1a7ea183"
+    "@tradie/file-utils" "2.0.0-alpha.1a7ea183"
+    "@tradie/generator-utils" "1.2.0-alpha.1a7ea183"
+    "@tradie/jest-utils" "2.0.0-alpha.1a7ea183"
+    "@tradie/processor-utils" "2.0.0-alpha.1a7ea183"
+    "@tradie/reporter-utils" "2.1.0-alpha.1a7ea183"
+    "@tradie/tslint-utils" "1.0.0-alpha.1a7ea183"
+    "@tradie/typescript-utils" "1.0.0-alpha.1a7ea183"
     ts-jest "^22.4.0"
     ts-node "^5.0.0"
     tslint-config-prettier "^1.9.0"
     tslint-microsoft-contrib "^5.0.3"
 
-"@tradie/processor-utils@2.0.0-alpha.27c7c657":
-  version "2.0.0-alpha.27c7c657"
-  resolved "https://registry.yarnpkg.com/@tradie/processor-utils/-/processor-utils-2.0.0-alpha.27c7c657.tgz#dc1892013b2f375a49389e300c281526e7d8147f"
+"@tradie/processor-utils@2.0.0-alpha.1a7ea183":
+  version "2.0.0-alpha.1a7ea183"
+  resolved "https://registry.yarnpkg.com/@tradie/processor-utils/-/processor-utils-2.0.0-alpha.1a7ea183.tgz#dfb172446da939db47af340c48ecdf810e12df95"
   dependencies:
-    "@jameslnewell/cancelable-promise" "1.1.0-alpha.f106bb76"
-    "@tradie/file-utils" "2.0.0-alpha.27c7c657"
-    "@tradie/reporter-utils" "2.1.0-alpha.27c7c657"
+    "@jameslnewell/cancelable-promise" "^1.0.2"
+    "@tradie/file-utils" "2.0.0-alpha.1a7ea183"
+    "@tradie/reporter-utils" "2.1.0-alpha.1a7ea183"
 
-"@tradie/reporter-utils@2.1.0-alpha.27c7c657":
-  version "2.1.0-alpha.27c7c657"
-  resolved "https://registry.yarnpkg.com/@tradie/reporter-utils/-/reporter-utils-2.1.0-alpha.27c7c657.tgz#9b6167c9676d2019ef1cf454565e0b80249b11f8"
+"@tradie/reporter-utils@2.1.0-alpha.1a7ea183":
+  version "2.1.0-alpha.1a7ea183"
+  resolved "https://registry.yarnpkg.com/@tradie/reporter-utils/-/reporter-utils-2.1.0-alpha.1a7ea183.tgz#a0b14163740990ff24ae44a03a0c52680a4906b1"
   dependencies:
-    "@tradie/cli-utils" "1.2.0-alpha.27c7c657"
+    "@tradie/cli-utils" "1.2.0-alpha.1a7ea183"
     "@types/lodash" "^4.14.108"
     chalk "^2.4.1"
     lodash "^4.17.10"
 
-"@tradie/tslint-utils@1.0.0-alpha.27c7c657":
-  version "1.0.0-alpha.27c7c657"
-  resolved "https://registry.yarnpkg.com/@tradie/tslint-utils/-/tslint-utils-1.0.0-alpha.27c7c657.tgz#16a101872f9b66ea039b6b8b4efab9db2aca45a7"
+"@tradie/tslint-utils@1.0.0-alpha.1a7ea183":
+  version "1.0.0-alpha.1a7ea183"
+  resolved "https://registry.yarnpkg.com/@tradie/tslint-utils/-/tslint-utils-1.0.0-alpha.1a7ea183.tgz#de90cd64cd61dcebbe4b81ed9d61cacd3b9c9173"
   dependencies:
-    "@tradie/reporter-utils" "2.1.0-alpha.27c7c657"
+    "@tradie/reporter-utils" "2.1.0-alpha.1a7ea183"
     tslint "^5.9.1"
 
-"@tradie/typescript-utils@1.0.0-alpha.27c7c657":
-  version "1.0.0-alpha.27c7c657"
-  resolved "https://registry.yarnpkg.com/@tradie/typescript-utils/-/typescript-utils-1.0.0-alpha.27c7c657.tgz#2818ef9efe5ccd6dfc632845c47b04a0cf7d4c96"
+"@tradie/typescript-utils@1.0.0-alpha.1a7ea183":
+  version "1.0.0-alpha.1a7ea183"
+  resolved "https://registry.yarnpkg.com/@tradie/typescript-utils/-/typescript-utils-1.0.0-alpha.1a7ea183.tgz#6e1ec55e9641859021b059a4ca53680a3e1fed11"
   dependencies:
-    "@tradie/file-utils" "2.0.0-alpha.27c7c657"
-    "@tradie/reporter-utils" "2.1.0-alpha.27c7c657"
+    "@tradie/file-utils" "2.0.0-alpha.1a7ea183"
+    "@tradie/reporter-utils" "2.1.0-alpha.1a7ea183"
     typescript "^2.7.2"
 
 "@types/anymatch@^1.3.0":

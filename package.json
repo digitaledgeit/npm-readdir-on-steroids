@@ -14,7 +14,7 @@
   "repository": "jameslnewell/readdir-on-steroids",
   "main": "lib/index.js",
   "devDependencies": {
-    "@tradie/node-scripts": "1.0.0-alpha.27c7c657",
+    "@tradie/node-scripts": "1.0.0-alpha.1a7ea183",
     "@types/jest": "^23.0.0",
     "husky": "^0.14.3",
     "lint-staged": "^7.1.3",
