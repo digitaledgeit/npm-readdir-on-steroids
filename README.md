@@ -1,5 +1,7 @@
 # readdir-on-steroids
 
+[![CircleCI](https://circleci.com/gh/jameslnewell/readdir-on-steroids.svg?style=svg)](https://circleci.com/gh/jameslnewell/readdir-on-steroids)
+
 Recursively read the contents of a directory.
 
 ## Installation
