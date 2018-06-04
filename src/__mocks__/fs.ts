@@ -3,20 +3,20 @@ import { Stats } from "fs";
 const dirStats = {
   isFile: () => false,
   isDirectory: () => true
-};
+} as Stats;
 
 const fileStats = {
   isFile: () => true,
   isDirectory: () => false
-};
+} as Stats;
 
-const paths = {
+const paths: { [path: string]: string[] } = {
   ok: ["package.json", "src"],
   "ok/src": ["index.ts", "index.test.ts"],
   err: ["package.json"]
 };
 
-const stats = {
+const stats: { [path: string]: Stats } = {
   ok: dirStats,
   "ok/package.json": fileStats,
   "ok/src": dirStats,
