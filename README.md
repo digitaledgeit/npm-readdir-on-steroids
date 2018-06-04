@@ -1,52 +1,76 @@
 # readdir-on-steroids
-Recursively reads the contents of a directory.
+
+Recursively read the contents of a directory.
 
 ## Installation
 
-	npm install readdir-on-steroids
-
-## Methods
-
-	readdir(directory, [options, [callback]])
-
-## Options
-
- - listFilter: `function(path, stats)` - Filters the files/directories to be included in the list
- - walkFilter: `function(path, stats)` - Filters the directories to be read
-
-Where:
-
- - path: `string` - The full path of the file or directory. If a relative root path was passed the path will remain relative to the root.
- - stats: `object` - The fs.Stat object with two additional properties:
-	- root: `string` - The root directory passed to the readdir method
-	- depth: `integer` - The depth of the current path
+```bash
+npm install readdir-on-steroids
+```
 
 ## Usage
 
-	var readdir = require('readdir-on-steroids');
+```js
+import readdir from "readdir-on-steroids";
 
-	var directory = '.';
+const directory = process.argv[3] || ".";
 
-	var options = {
+// only list files
+function listFilter(path, stats) {
+  return stats.isFile();
+}
 
-		//only list files ending in '.js'
-		listFilter: function(path, stats) {
-			return (path.substr(-3) === '.js');
-		},
+// don't traverse the .git, lib, node_modules or .vscode directories
+function walkFilter(path, stats) {
+  return (
+    !/\.git$/.test(path) &&
+    !/lib/.test(path) &&
+    !/node_modules/.test(path) &&
+    !/\.vscode/.test(path)
+  );
+}
 
-		//don't look in the .git or node_modules folders (for performance sake)
-		walkFilter: function(path, stats) {
-			return path.indexOf('.idea') === -1 && path.indexOf('.git') === -1 && path.indexOf('node_modules') === -1;
-		}
+readdir(directory, { listFilter, walkFilter }).then(
+  paths => console.log(paths.join("\n")),
+  error => console.error(error)
+);
+```
 
-	};
+Output:
 
-	//log the list of files found to the console
-	function callback(err, files) {
-		if (err) throw err;
-		console.log(files);
-		console.log('done!');
-	}
+```
+.gitignore
+README.md
+examples/index.ts
+package.json
+src/__mocks__/fs.ts
+src/index.test.ts
+src/index.ts
+yarn.lock
+```
 
-	readdir(directory, options, callback);
+## API
 
+```ts
+readdir(directory: string, options?: Options): Promise<string[]>
+```
+
+| Parameter   | Type      | Required | Default | Description            |
+| ----------- | --------- | -------- | ------- | ---------------------- |
+| `directory` | `string`  | ✓        |         | The directory to read. |
+| `options`   | `Options` |          | `{}`    | The options.           |
+
+### Options
+
+| Parameter     | Type                                      | Required | Default | Description                                           |
+| ------------- | ----------------------------------------- | -------- | ------- | ----------------------------------------------------- |
+| `concurrency` | `number`                                  |          | 4       | The maximum number of concurrent calls to `readdir`.  |
+| `listFilter`  | `(path: string, stats: Stats) => boolean` |          |         | A function filtering the paths that will be returned. |
+| `walkFilter`  | `(path: string, stats: Stats) => boolean` |          |         | A function filtering the paths that will be walked.   |
+
+### Stats
+
+| Parameter | Type     | Required | Default | Description                                   |
+| --------- | -------- | -------- | ------- | --------------------------------------------- |
+| `root`    | `string` | ✓        |         | The root directory being read.                |
+| `depth`   | `number` | ✓        |         | The relative depth from the `root` directory. |
