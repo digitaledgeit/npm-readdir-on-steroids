@@ -1,6 +1,6 @@
 {
   "name": "readdir-on-steroids",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "keywords": [
     "fs",
     "readdir",
@@ -13,6 +13,10 @@
   "bugs": "jameslnewell/readdir-on-steroids",
   "repository": "jameslnewell/readdir-on-steroids",
   "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
   "devDependencies": {
     "@tradie/node-scripts": "1.0.0-alpha.1a7ea183",
     "@types/jest": "^23.0.0",
