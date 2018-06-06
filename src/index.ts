@@ -1,12 +1,13 @@
-import * as FS from "fs";
-import * as Path from "path";
-import { promisify } from "util";
+import { readdir, stat, Stats as FileSystemStats } from "fs";
+import { join, relative } from "path";
 import { EventEmitter } from "events";
+import { Queue, Next } from "./queue";
 
-const getPaths = promisify(FS.readdir);
-const getStats = promisify(FS.stat);
+/*
+  Using native callback versions of the API is about 35% more efficient than using promisfied versions
+*/
 
-export interface Stats extends FS.Stats {
+export interface Stats extends FileSystemStats {
   root: string;
   depth: number;
 }
@@ -17,77 +18,90 @@ export interface Options {
   walkFilter?: (path: string, stats: Stats) => boolean; // filters the folders that will be walked/read.
 }
 
+export interface ReaddirPromise<T> extends Promise<T> {
+  on(event: "read", listener: (path: string, stats: Stats) => void): void;
+  on(event: string, listener: (...args: any[]) => void): void;
+  off(event: "read", listener: (path: string, stats: Stats) => void): void;
+  off(event: string, listener: (...args: any[]) => void): void;
+}
+
 export default function(
   root: string,
   options: Options = {}
-): PromiseLike<string[]> {
-  const {
-    concurrency = 4,
-    listFilter = () => true,
-    walkFilter = () => true
-  } = options;
-
-  return new Promise((resolve, reject) => {
-    let countOfActiveWorkers = 0;
-    let countOfFinishedWorkers = 0;
-    const listOfPaths: string[] = [];
-    const directoriesToRead: [string, number][] = [[root, 0]];
-
-    const worker = async () => {
-      // get the next directory and depth
-      const directoryToRead = directoriesToRead.pop();
-
-      // check if we're finished looking at directories
-      if (!directoryToRead) {
-        if (countOfActiveWorkers === 0) {
-          ++countOfFinishedWorkers;
-          if (countOfFinishedWorkers === concurrency) {
-            resolve(listOfPaths.sort());
+): ReaddirPromise<string[]> {
+  const { concurrency = 4, listFilter, walkFilter } = options;
+  const list: string[] = [];
+  const queue = new Queue();
+  const emitter = new EventEmitter();
+  const promise: Partial<ReaddirPromise<string[]>> = new Promise<string[]>(
+    (resolve, reject) => {
+      const createStatTask = (path: string, depth: number) => (next: Next) => {
+        stat(path, (error, stats) => {
+          if (error) {
+            next(error);
+            return;
           }
-        } else {
-          setImmediate(worker);
-        }
-        return;
-      }
 
-      const [directory, depth] = directoryToRead;
+          // cast to readdir stats because spreading loses the methods
+          const readdirStats: Stats = stats as Stats;
+          readdirStats.root = root;
+          readdirStats.depth = depth;
 
-      // read the directory and filter the paths
-      ++countOfActiveWorkers;
-      try {
-        const paths = await getPaths(directory);
-        await Promise.all(
-          paths.map(async path => {
-            const fullPath = Path.join(directory, path);
-            const stats = (await getStats(fullPath)) as Stats;
+          const relativePath = relative(root, path);
 
-            stats.root = root;
-            stats.depth = depth;
+          if (
+            !listFilter ||
+            (listFilter && listFilter(relativePath, readdirStats))
+          ) {
+            list.push(relativePath);
+            emitter.emit("read", relativePath, readdirStats);
+          }
 
-            if (listFilter(fullPath, stats)) {
-              listOfPaths.push(Path.relative(root, fullPath));
+          if (stats.isDirectory()) {
+            if (
+              !walkFilter ||
+              (walkFilter && walkFilter(relativePath, readdirStats))
+            ) {
+              queue.enqueue(createReaddirTask(path, depth + 1));
             }
+          }
 
-            if (stats.isDirectory()) {
-              if (walkFilter(fullPath, stats)) {
-                directoriesToRead.push([fullPath, depth + 1]);
-              }
-            }
-          })
-        );
-      } catch (error) {
-        reject(error);
-      }
-      --countOfActiveWorkers;
+          next();
+        });
+      };
 
-      // do it all again
-      await worker();
-    };
+      const createReaddirTask = (directory: string, depth: number) => (
+        next: Next
+      ) => {
+        readdir(directory, (error, paths) => {
+          if (error) {
+            next(error);
+            return;
+          }
+          paths.forEach(path =>
+            queue.enqueue(createStatTask(join(directory, path), depth))
+          );
+          next();
+        });
+      };
 
-    // start multiple workers
-    worker();
-    for (let i = 1; i < concurrency; ++i) {
-      setImmediate(worker, 0);
+      queue.enqueue(createReaddirTask(root, 0));
+
+      // give consumers a chance to register listeners
+      setImmediate(() => {
+        queue.run(error => {
+          if (error) {
+            reject(error);
+          } else {
+            resolve(list);
+          }
+        });
+      });
     }
-  });
+  );
+
+  promise.on = emitter.on.bind(emitter);
+  promise.off = emitter.removeListener.bind(emitter);
+
+  return promise as ReaddirPromise<string[]>;
 }
