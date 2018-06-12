@@ -15,7 +15,7 @@ describe("readdir()", () => {
   it("should reject when a filesystem error occurs", async () => {
     expect.assertions(1);
     try {
-      await readdir("err");
+      await readdir("non-existent-directory");
     } catch (error) {
       expect(error).toBeInstanceOf(Error);
     }
