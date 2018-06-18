@@ -22,8 +22,13 @@ export class Queue {
     let taskError: Error | undefined;
 
     const finishTask = (error?: Error) => {
-      taskError = error;
       --countOfActiveWorkers;
+
+      // store the error if there was one
+      if (!taskError && error) {
+        taskError = error;
+      }
+
       startTask();
     };
 
@@ -32,11 +37,9 @@ export class Queue {
 
       // check if there was an error
       if (taskError) {
-        if (countOfActiveWorkers === 0) {
-          ++countOfFinishedWorkers;
-          if (countOfFinishedWorkers === concurrency) {
-            callback(taskError);
-          }
+        ++countOfFinishedWorkers;
+        if (countOfFinishedWorkers === concurrency) {
+          callback(taskError);
         }
         return;
       }
@@ -46,7 +49,11 @@ export class Queue {
         if (countOfActiveWorkers === 0) {
           ++countOfFinishedWorkers;
           if (countOfFinishedWorkers === concurrency) {
-            callback();
+            if (taskError) {
+              callback(taskError);
+            } else {
+              callback();
+            }
           }
         } else {
           setImmediate(startTask);

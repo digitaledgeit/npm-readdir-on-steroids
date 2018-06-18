@@ -26,107 +26,111 @@
   dependencies:
     any-observable "^0.3.0"
 
-"@tradie/cli-utils@1.2.0-alpha.1a7ea183":
-  version "1.2.0-alpha.1a7ea183"
-  resolved "https://registry.yarnpkg.com/@tradie/cli-utils/-/cli-utils-1.2.0-alpha.1a7ea183.tgz#94ec7634e73c1b1baa8d0f73d43a0c0cebc34258"
+"@tradie/cli-utils@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@tradie/cli-utils/-/cli-utils-1.2.0.tgz#c23f7e8beba456d3ddd3b98ac5a01177cbfcf79a"
   dependencies:
     "@types/node" "^9.4.6"
 
-"@tradie/cli@2.0.0-alpha.1a7ea183":
-  version "2.0.0-alpha.1a7ea183"
-  resolved "https://registry.yarnpkg.com/@tradie/cli/-/cli-2.0.0-alpha.1a7ea183.tgz#96b255f43aa7741761dd9ac48e167e45d792fc58"
+"@tradie/cli@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@tradie/cli/-/cli-2.0.0.tgz#629f85e2510802d58b35c4bc82dd624b27182e48"
   dependencies:
     "@types/yargs" "^11.0.0"
     chalk "^2.4.1"
     yargs "^8.0.1"
 
-"@tradie/file-utils@2.0.0-alpha.1a7ea183":
-  version "2.0.0-alpha.1a7ea183"
-  resolved "https://registry.yarnpkg.com/@tradie/file-utils/-/file-utils-2.0.0-alpha.1a7ea183.tgz#db83c698c91fa251b7da753632b2392e286311f4"
+"@tradie/file-utils@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@tradie/file-utils/-/file-utils-2.0.0.tgz#909f9fbaff9ef1135a0b2a17c99c9e16571040cf"
   dependencies:
     "@jameslnewell/cancelable-promise" "^1.0.2"
     "@types/anymatch" "^1.3.0"
     "@types/chokidar" "^1.7.5"
     "@types/del" "^3.0.0"
-    "@types/fs-extra" "^5.0.1"
+    "@types/fs-extra" "^5.0.3"
     "@types/node" "^6.0.102"
     anymatch "^1.3.0"
     chokidar "^1.7.0"
     del "^3.0.0"
-    finder-on-steroids "^0.4.0"
-    fs-extra "^4.0.2"
+    finder-on-steroids "^1.0.2"
+    fs-extra "^6.0.1"
 
-"@tradie/generator-utils@1.2.0-alpha.1a7ea183":
-  version "1.2.0-alpha.1a7ea183"
-  resolved "https://registry.yarnpkg.com/@tradie/generator-utils/-/generator-utils-1.2.0-alpha.1a7ea183.tgz#303310824ead11817145470b8439f333c8efc1d8"
+"@tradie/generator-utils@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@tradie/generator-utils/-/generator-utils-1.2.0.tgz#639488a2d6d4486152e72d4a864f6e9dd69e2005"
   dependencies:
-    "@tradie/file-utils" "2.0.0-alpha.1a7ea183"
+    "@tradie/file-utils" "^2.0.0"
     "@types/diff" "^3.5.1"
     "@types/extend" "^3.0.0"
     "@types/inquirer" "^0.0.41"
     chalk "^2.4.1"
     diff "^3.2.0"
     extend "^3.0.1"
-    finder-on-steroids "^0.4.0"
-    fs-extra "^3.0.1"
+    finder-on-steroids "^1.0.2"
+    fs-extra "^6.0.1"
     inquirer "^3.2.0"
 
-"@tradie/jest-utils@2.0.0-alpha.1a7ea183":
-  version "2.0.0-alpha.1a7ea183"
-  resolved "https://registry.yarnpkg.com/@tradie/jest-utils/-/jest-utils-2.0.0-alpha.1a7ea183.tgz#f64142b31eee8a1598adf15a048b7600ebd4c806"
+"@tradie/jest-utils@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@tradie/jest-utils/-/jest-utils-2.0.0.tgz#5f5957509b1dd170eb8b32e0643aca0370145e93"
   dependencies:
     "@types/babel-core" "^6.25.3"
     babel-core "^6.26.0"
     jest-cli "^22.4.2"
     typescript "^2.7.2"
 
-"@tradie/node-scripts@1.0.0-alpha.1a7ea183":
-  version "1.0.0-alpha.1a7ea183"
-  resolved "https://registry.yarnpkg.com/@tradie/node-scripts/-/node-scripts-1.0.0-alpha.1a7ea183.tgz#53593dc5cd346a688ac6709f2f19b57778b3daec"
+"@tradie/node-scripts@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@tradie/node-scripts/-/node-scripts-1.1.0.tgz#1199ca2f4dd0ddf534438c735fb7fb323e12da8c"
   dependencies:
-    "@tradie/cli" "2.0.0-alpha.1a7ea183"
-    "@tradie/file-utils" "2.0.0-alpha.1a7ea183"
-    "@tradie/generator-utils" "1.2.0-alpha.1a7ea183"
-    "@tradie/jest-utils" "2.0.0-alpha.1a7ea183"
-    "@tradie/processor-utils" "2.0.0-alpha.1a7ea183"
-    "@tradie/reporter-utils" "2.1.0-alpha.1a7ea183"
-    "@tradie/tslint-utils" "1.0.0-alpha.1a7ea183"
-    "@tradie/typescript-utils" "1.0.0-alpha.1a7ea183"
+    "@tradie/cli" "^2.0.0"
+    "@tradie/file-utils" "^2.0.0"
+    "@tradie/generator-utils" "^1.2.0"
+    "@tradie/jest-utils" "^2.0.0"
+    "@tradie/processor-utils" "^3.1.0"
+    "@tradie/reporter-utils" "^2.1.0"
+    "@tradie/tslint-utils" "^1.0.0"
+    "@tradie/typescript-utils" "^1.0.0"
+    jest "^22.4.2"
     ts-jest "^22.4.0"
     ts-node "^5.0.0"
+    tslint "^5.9.1"
     tslint-config-prettier "^1.9.0"
     tslint-microsoft-contrib "^5.0.3"
+    typescript "^2.7.2"
 
-"@tradie/processor-utils@2.0.0-alpha.1a7ea183":
-  version "2.0.0-alpha.1a7ea183"
-  resolved "https://registry.yarnpkg.com/@tradie/processor-utils/-/processor-utils-2.0.0-alpha.1a7ea183.tgz#dfb172446da939db47af340c48ecdf810e12df95"
+"@tradie/processor-utils@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@tradie/processor-utils/-/processor-utils-3.1.0.tgz#b011628a1e07e1c9bc9f5f509499dbc190d0a44f"
   dependencies:
     "@jameslnewell/cancelable-promise" "^1.0.2"
-    "@tradie/file-utils" "2.0.0-alpha.1a7ea183"
-    "@tradie/reporter-utils" "2.1.0-alpha.1a7ea183"
+    "@tradie/file-utils" "^2.0.0"
+    "@tradie/reporter-utils" "^2.1.0"
 
-"@tradie/reporter-utils@2.1.0-alpha.1a7ea183":
-  version "2.1.0-alpha.1a7ea183"
-  resolved "https://registry.yarnpkg.com/@tradie/reporter-utils/-/reporter-utils-2.1.0-alpha.1a7ea183.tgz#a0b14163740990ff24ae44a03a0c52680a4906b1"
+"@tradie/reporter-utils@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@tradie/reporter-utils/-/reporter-utils-2.1.0.tgz#a65032e21b0599768f6548168699613359ff8754"
   dependencies:
-    "@tradie/cli-utils" "1.2.0-alpha.1a7ea183"
+    "@tradie/cli-utils" "^1.2.0"
     "@types/lodash" "^4.14.108"
     chalk "^2.4.1"
     lodash "^4.17.10"
 
-"@tradie/tslint-utils@1.0.0-alpha.1a7ea183":
-  version "1.0.0-alpha.1a7ea183"
-  resolved "https://registry.yarnpkg.com/@tradie/tslint-utils/-/tslint-utils-1.0.0-alpha.1a7ea183.tgz#de90cd64cd61dcebbe4b81ed9d61cacd3b9c9173"
+"@tradie/tslint-utils@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@tradie/tslint-utils/-/tslint-utils-1.0.0.tgz#43c6ebb50eb17d9e530211c52a739cf1e19eba19"
   dependencies:
-    "@tradie/reporter-utils" "2.1.0-alpha.1a7ea183"
+    "@tradie/reporter-utils" "^2.1.0"
     tslint "^5.9.1"
 
-"@tradie/typescript-utils@1.0.0-alpha.1a7ea183":
-  version "1.0.0-alpha.1a7ea183"
-  resolved "https://registry.yarnpkg.com/@tradie/typescript-utils/-/typescript-utils-1.0.0-alpha.1a7ea183.tgz#6e1ec55e9641859021b059a4ca53680a3e1fed11"
+"@tradie/typescript-utils@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@tradie/typescript-utils/-/typescript-utils-1.0.0.tgz#46ef08c25358840209b996cd3fb3ca27865d3320"
   dependencies:
-    "@tradie/file-utils" "2.0.0-alpha.1a7ea183"
-    "@tradie/reporter-utils" "2.1.0-alpha.1a7ea183"
+    "@tradie/file-utils" "^2.0.0"
+    "@tradie/reporter-utils" "^2.1.0"
+    flowgen "^1.2.2"
     typescript "^2.7.2"
 
 "@types/anymatch@^1.3.0":
@@ -197,9 +201,9 @@
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@types/extend/-/extend-3.0.0.tgz#d269e5af1463cd6344272abd814c8a833b914d07"
 
-"@types/fs-extra@^5.0.1":
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/@types/fs-extra/-/fs-extra-5.0.2.tgz#235a7e2b56452cc0a6a4809b53e1d1eaffff9c96"
+"@types/fs-extra@^5.0.3":
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/@types/fs-extra/-/fs-extra-5.0.3.tgz#feb31d55eeae3ccd5f92dbce806344a6c777a713"
   dependencies:
     "@types/node" "*"
 
@@ -226,7 +230,7 @@
   version "4.14.109"
   resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.109.tgz#b1c4442239730bf35cabaf493c772b18c045886d"
 
-"@types/minimatch@*":
+"@types/minimatch@*", "@types/minimatch@^3.0.3":
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.3.tgz#3dca0e3f33b200fc7d1139c0cd96c1268cadfd9d"
 
@@ -506,10 +510,6 @@ arrify@^1.0.0, arrify@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/arrify/-/arrify-1.0.1.tgz#898508da2226f380df904728456849c1501a4b0d"
 
-asap@~1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/asap/-/asap-1.0.0.tgz#b2a45da5fdfa20b0496fc3768cc27c12fa916a7d"
-
 asn1@~0.2.3:
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/asn1/-/asn1-0.2.3.tgz#dac8787713c9966849fc8180777ebe9c1ddf3b86"
@@ -747,6 +747,10 @@ binary-extensions@^1.0.0:
   version "1.11.0"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-1.11.0.tgz#46aa1751fb6a2f93ee5e689bb1087d4b14c6c205"
 
+bluebird@^3.0.5:
+  version "3.5.1"
+  resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.1.tgz#d9551f9de98f1fcda1e683d17ee91a0602ee2eb9"
+
 brace-expansion@^1.1.7:
   version "1.1.11"
   resolved "https://registry.yarnpkg.com/brace-expansion/-/brace-expansion-1.1.11.tgz#3c7fcbf529d87226f3d2f52b966ff5271eb441dd"
@@ -980,7 +984,7 @@ combined-stream@1.0.6, combined-stream@~1.0.5:
   dependencies:
     delayed-stream "~1.0.0"
 
-commander@^2.12.1, commander@^2.14.1, commander@^2.9.0:
+commander@^2.11.0, commander@^2.12.1, commander@^2.14.1, commander@^2.9.0:
   version "2.15.1"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.15.1.tgz#df46e867d0fc2aec66a34662b406a9ccafff5b0f"
 
@@ -995,6 +999,13 @@ component-emitter@^1.2.1:
 concat-map@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
+
+config-chain@~1.1.5:
+  version "1.1.11"
+  resolved "https://registry.yarnpkg.com/config-chain/-/config-chain-1.1.11.tgz#aba09747dfbe4c3e70e766a6e41586e1859fc6f2"
+  dependencies:
+    ini "^1.3.4"
+    proto-list "~1.2.1"
 
 console-control-strings@^1.0.0, console-control-strings@~1.1.0:
   version "1.1.0"
@@ -1192,6 +1203,16 @@ ecc-jsbn@~0.1.1:
   resolved "https://registry.yarnpkg.com/ecc-jsbn/-/ecc-jsbn-0.1.1.tgz#0fc73a9ed5f0d53c38193398523ef7e543777505"
   dependencies:
     jsbn "~0.1.0"
+
+editorconfig@^0.13.2:
+  version "0.13.3"
+  resolved "https://registry.yarnpkg.com/editorconfig/-/editorconfig-0.13.3.tgz#e5219e587951d60958fd94ea9a9a008cdeff1b34"
+  dependencies:
+    bluebird "^3.0.5"
+    commander "^2.9.0"
+    lru-cache "^3.2.0"
+    semver "^5.1.0"
+    sigmund "^1.0.1"
 
 elegant-spinner@^1.0.1:
   version "1.0.1"
@@ -1459,12 +1480,24 @@ find-up@^2.0.0, find-up@^2.1.0:
   dependencies:
     locate-path "^2.0.0"
 
-finder-on-steroids@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/finder-on-steroids/-/finder-on-steroids-0.4.0.tgz#4f185d0fbb85ebbb57cad5acc8251aad72481d69"
+finder-on-steroids@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/finder-on-steroids/-/finder-on-steroids-1.0.2.tgz#f06eba7124614024131a165276240b44c3558b7e"
   dependencies:
+    "@types/minimatch" "^3.0.3"
     minimatch "^3.0.3"
-    readdir-on-steroids "^0.2.2"
+    readdir-on-steroids "^1.1.1"
+
+flowgen@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/flowgen/-/flowgen-1.2.2.tgz#3db933b3149eb2569adc5df5d45b5c9c90c8b41c"
+  dependencies:
+    commander "^2.11.0"
+    js-beautify "^1.6.7"
+    lodash "^4.17.4"
+    paralleljs "^0.2.1"
+    typescript "^2.4.2"
+    typescript-compiler "^1.4.1-2"
 
 for-in@^1.0.1, for-in@^1.0.2:
   version "1.0.2"
@@ -1506,17 +1539,9 @@ fs-extra@6.0.0:
     jsonfile "^4.0.0"
     universalify "^0.1.0"
 
-fs-extra@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-3.0.1.tgz#3794f378c58b342ea7dbbb23095109c4b3b62291"
-  dependencies:
-    graceful-fs "^4.1.2"
-    jsonfile "^3.0.0"
-    universalify "^0.1.0"
-
-fs-extra@^4.0.2:
-  version "4.0.3"
-  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-4.0.3.tgz#0d852122e5bc5beb453fb028e9c0c9bf36340c94"
+fs-extra@^6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-6.0.1.tgz#8abc128f7946e310135ddc93b98bddb410e7a34b"
   dependencies:
     graceful-fs "^4.1.2"
     jsonfile "^4.0.0"
@@ -1783,7 +1808,7 @@ inherits@2, inherits@^2.0.1, inherits@~2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/inherits/-/inherits-2.0.3.tgz#633c2c83e3da42a502f52466022480f4208261de"
 
-ini@~1.3.0:
+ini@^1.3.4, ini@~1.3.0:
   version "1.3.5"
   resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.5.tgz#eee25f56db1c9ec6085e0c22778083f596abf927"
 
@@ -2152,7 +2177,7 @@ jest-changed-files@^22.2.0:
   dependencies:
     throat "^4.0.0"
 
-jest-cli@^22.4.2:
+jest-cli@^22.4.2, jest-cli@^22.4.4:
   version "22.4.4"
   resolved "https://registry.yarnpkg.com/jest-cli/-/jest-cli-22.4.4.tgz#68cd2a2aae983adb1e6638248ca21082fd6d9e90"
   dependencies:
@@ -2407,6 +2432,22 @@ jest-worker@^22.2.2, jest-worker@^22.4.3:
   dependencies:
     merge-stream "^1.0.1"
 
+jest@^22.4.2:
+  version "22.4.4"
+  resolved "https://registry.yarnpkg.com/jest/-/jest-22.4.4.tgz#ffb36c9654b339a13e10b3d4b338eb3e9d49f6eb"
+  dependencies:
+    import-local "^1.0.0"
+    jest-cli "^22.4.4"
+
+js-beautify@^1.6.7:
+  version "1.7.5"
+  resolved "https://registry.yarnpkg.com/js-beautify/-/js-beautify-1.7.5.tgz#69d9651ef60dbb649f65527b53674950138a7919"
+  dependencies:
+    config-chain "~1.1.5"
+    editorconfig "^0.13.2"
+    mkdirp "~0.5.0"
+    nopt "~3.0.1"
+
 js-tokens@^3.0.0, js-tokens@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-3.0.2.tgz#9866df395102130e38f7f996bceb65443209c25b"
@@ -2482,12 +2523,6 @@ json-stringify-safe@~5.0.1:
 json5@^0.5.1:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/json5/-/json5-0.5.1.tgz#1eade7acc012034ad84e2396767ead9fa5495821"
-
-jsonfile@^3.0.0:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/jsonfile/-/jsonfile-3.0.1.tgz#a5ecc6f65f53f662c4415c7675a0331d0992ec66"
-  optionalDependencies:
-    graceful-fs "^4.1.6"
 
 jsonfile@^4.0.0:
   version "4.0.0"
@@ -2691,6 +2726,12 @@ loose-envify@^1.0.0:
   dependencies:
     js-tokens "^3.0.0"
 
+lru-cache@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-3.2.0.tgz#71789b3b7f5399bec8565dda38aa30d2a097efee"
+  dependencies:
+    pseudomap "^1.0.1"
+
 lru-cache@^4.0.1:
   version "4.1.3"
   resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-4.1.3.tgz#a1175cf3496dfc8436c156c334b4955992bce69c"
@@ -2826,7 +2867,7 @@ mixin-deep@^1.2.0:
     for-in "^1.0.2"
     is-extendable "^1.0.1"
 
-mkdirp@^0.5.0, mkdirp@^0.5.1:
+mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
   dependencies:
@@ -2907,6 +2948,12 @@ nopt@^4.0.1:
   dependencies:
     abbrev "1"
     osenv "^0.1.4"
+
+nopt@~3.0.1:
+  version "3.0.6"
+  resolved "https://registry.yarnpkg.com/nopt/-/nopt-3.0.6.tgz#c6465dbf08abcd4db359317f79ac68a646b28ff9"
+  dependencies:
+    abbrev "1"
 
 normalize-package-data@^2.3.2:
   version "2.4.0"
@@ -3111,6 +3158,10 @@ p-try@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/p-try/-/p-try-1.0.0.tgz#cbc79cdbaf8fd4228e13f621f2b1a237c1b207b3"
 
+paralleljs@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/paralleljs/-/paralleljs-0.2.1.tgz#ebca745d3e09c01e2bebcc14858891ff4510e926"
+
 parse-glob@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/parse-glob/-/parse-glob-3.0.4.tgz#b2c376cfb11f35513badd173ef0bb6e3a388391c"
@@ -3257,13 +3308,11 @@ process-nextick-args@~2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/process-nextick-args/-/process-nextick-args-2.0.0.tgz#a37d732f4271b4ab1ad070d35508e8290788ffaa"
 
-promise@~4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/promise/-/promise-4.0.0.tgz#72d9657988f5e87528293686c61a345ed2054c46"
-  dependencies:
-    asap "~1.0.0"
+proto-list@~1.2.1:
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/proto-list/-/proto-list-1.2.4.tgz#212d5bfe1318306a420f6402b8e26ff39647a849"
 
-pseudomap@^1.0.2:
+pseudomap@^1.0.1, pseudomap@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/pseudomap/-/pseudomap-1.0.2.tgz#f052a28da70e618917ef0a8ac34c1ae5a68286b3"
 
@@ -3338,11 +3387,9 @@ readable-stream@^2.0.1, readable-stream@^2.0.2, readable-stream@^2.0.6:
     string_decoder "~1.1.1"
     util-deprecate "~1.0.1"
 
-readdir-on-steroids@^0.2.2:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/readdir-on-steroids/-/readdir-on-steroids-0.2.2.tgz#2bf4403d6ec672deeba50f6db5611ee7d36cc85a"
-  dependencies:
-    promise "~4.0.0"
+readdir-on-steroids@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/readdir-on-steroids/-/readdir-on-steroids-1.1.1.tgz#eb32764047a6ceac86655899b439f7f726c51247"
 
 readdirp@^2.0.0:
   version "2.1.0"
@@ -3558,7 +3605,7 @@ semver-compare@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/semver-compare/-/semver-compare-1.0.0.tgz#0dee216a1c941ab37e9efb1788f6afc5ff5537fc"
 
-"semver@2 || 3 || 4 || 5", semver@^5.3.0, semver@^5.4.1:
+"semver@2 || 3 || 4 || 5", semver@^5.1.0, semver@^5.3.0, semver@^5.4.1:
   version "5.5.0"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.5.0.tgz#dc4bbc7a6ca9d916dee5d43516f0092b58f7b8ab"
 
@@ -3610,6 +3657,10 @@ shell-quote@^1.6.1:
 shellwords@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/shellwords/-/shellwords-0.1.1.tgz#d6b9181c1a48d397324c84871efbcfc73fc0654b"
+
+sigmund@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/sigmund/-/sigmund-1.0.1.tgz#3ff21f198cad2175f9f3b781853fd94d0d19b590"
 
 signal-exit@^3.0.0, signal-exit@^3.0.2:
   version "3.0.2"
@@ -4023,6 +4074,14 @@ type-check@~0.3.2:
   resolved "https://registry.yarnpkg.com/type-check/-/type-check-0.3.2.tgz#5884cab512cf1d355e3fb784f30804b2b520db72"
   dependencies:
     prelude-ls "~1.1.2"
+
+typescript-compiler@^1.4.1-2:
+  version "1.4.1-2"
+  resolved "https://registry.yarnpkg.com/typescript-compiler/-/typescript-compiler-1.4.1-2.tgz#ba4f7db22d91534a1929d90009dce161eb72fd3f"
+
+typescript@^2.4.2:
+  version "2.9.2"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.9.2.tgz#1cbf61d05d6b96269244eb6a3bce4bd914e0f00c"
 
 typescript@^2.7.2:
   version "2.9.1"
